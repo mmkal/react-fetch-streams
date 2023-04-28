@@ -82,8 +82,8 @@ async function startStream(url, {onNext, onError, onDone, fetchParams}) {
 
   try {
     const res = await fetch(url, {
+      method: 'GET',
       ...fetchParams,
-      method: 'GET'
     });
 
     const reader = res.body.getReader();
